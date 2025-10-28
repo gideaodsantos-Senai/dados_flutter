@@ -105,3 +105,24 @@ class _EstadoTelaConfiguracaoJogadores extends State<TelaConfiguracaoJogadores>{
     );
   }
 }
+
+//3. TELA PRINCIPAL DO JOGO
+
+//Aqui eu vou receber os nomes como propriedades
+class TelaJogodeDados extends StatefulWidget {
+  //Variáveis finais que armazenam os nomes recebidos da dela anterior
+  final String nomeJogador1;
+  final String nomeJogador2;
+
+  const TelaJogodeDados ({
+    super.key,
+    //o required garante que esses valores devem ser passados.
+    required this.nomeJogador1,
+    required this.nomeJogador2,
+    });
+
+    @override
+    //Ei tio flutter, quando essa tela for criada, use essa classe chamada _EstadoTelaJogoDeDados
+    //para guardar e controlar o estado dela
+    State<TelaJogodeDados> createState() => _EstadoTelaJogoDeDados();
+}
