@@ -201,7 +201,7 @@ class _EstadoTelaJogoDeDados extends State<TelaJogodeDados>{
                   const Icon(Icons.error, size: 40),
                 ),
               );
-            }),
+            }).toList(),
           )
         ],
       )
